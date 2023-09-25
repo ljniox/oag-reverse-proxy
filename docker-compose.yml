@@ -31,6 +31,7 @@ services:
         DEFAULT_EMAIL: james@oneagegroup.com
 
   oneagegroupcom:
+      container_name: oneagegroup_com
       build:
         context: ../oag_site_web/
       expose:
@@ -43,6 +44,7 @@ services:
         - 8001:8001
 
   classmanagement:
+      container_name: class_management_app
       build:
         context: ../class_management_app
       expose:
