@@ -39,7 +39,7 @@ services:
           LETSENCRYPT_HOST: catesdb.oneagegroup.com
 
   oneagegroupcom:
-      buid: oag_site_web 
+      build: oag_site_web 
           - "8001"
       environment:
           VIRTUAL_HOST: oneagegroup.com
