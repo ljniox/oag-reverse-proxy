@@ -31,6 +31,7 @@ services:
       - /home/ubuntu/oag-reverse-proxy/nginx-proxy/html:/usr/share/nginx/html
       - /home/ubuntu/oag-reverse-proxy/nginx-proxy/certs:/etc/nginx/certs:ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /home/ubuntu/oag-reverse-proxy/nginx-proxy/templates/nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
       - /home/ubuntu/oag-reverse-proxy/nginx-proxy/templates:/etc/docker-gen/templates:ro
 
   nginx-letsencrypt:
