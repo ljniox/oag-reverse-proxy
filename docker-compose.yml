@@ -3,6 +3,7 @@ services:
 
   classmanagement:
       build: class_management_app
+      context: .
       dockerfile: ../class_management_app/Dockerfile
       expose:
           - "8002"
@@ -15,6 +16,7 @@ services:
 
   oneagegroupcom:
       build: oag_site_web
+      context: .
       dockerfile: ../oag_site_web/Dockerfile
       expose:
           - "8001"
