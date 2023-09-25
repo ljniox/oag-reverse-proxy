@@ -12,3 +12,15 @@ services:
         PORT: 8001
       ports:
         - 8001:8001
+
+  classmanagement:
+      build:
+        context: ../class_management_app
+      expose:
+        - "8002"
+      environment:
+        VIRTUAL_HOST: catesdb.oneagegroup.com
+        LETSENCRYPT_HOST: catesdb.oneagegroup.com
+        PORT: 8002
+      ports:
+        - 8002:8002
