@@ -17,6 +17,18 @@ Then create the reverse proxy with the nginx, nginx-gen and nginx-letsencrypt co
 $ cd /home/ubuntu/oag-reverse-proxy/nginx-proxy
 $ docker-compose up -d
 
+- issue :
+
+>  Unable to parse template: read /etc/docker-gen/templates/nginx.tmpl: is a directory
+
+added directory
+
+> /home/ubuntu/oag-reverse-proxy/nginx-proxy/templates
+
+changed line on docker-compose.yml
+
+> /home/ubuntu/oag-reverse-proxy/nginx-proxy/templates:/etc/docker-gen/templates:ro
+
 
 # ----- ----- ---- --- -- -- -- --- DEPRECATED AS OF 24/09/2023 ---- --- -- -- -- --- -- 
 
