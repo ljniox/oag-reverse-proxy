@@ -1,14 +1,13 @@
 version: "3.8"
 services:
-
-  oneagegroupcom:
+  classmanagement:
       build:
-        context: ../oag_site_web/
+        context: ../class_management_app
       expose:
-        - "8001"
+        - "8002"
       environment:
-        VIRTUAL_HOST: oneagegroup.com
-        LETSENCRYPT_HOST: oneagegroup.com
-        PORT: 8001
+        VIRTUAL_HOST: catesdb.oneagegroup.com
+        LETSENCRYPT_HOST: catesdb.oneagegroup.com
+        PORT: 8002
       ports:
-        - 8001:8001
+        - 8002:8002
