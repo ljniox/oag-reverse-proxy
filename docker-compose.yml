@@ -3,8 +3,7 @@ services:
 
   classmanagement:
       build:
-        context: .
-        dockerfile: ../class_management_app/Dockerfile
+        context: ../class_management_app
       expose:
         - "8002"
       environment:
@@ -16,8 +15,7 @@ services:
 
   oneagegroupcom:
       build:
-        context: .
-        dockerfile: ../oag_site_web/Dockerfile
+        context: ../oag_site_web/
       expose:
         - "8001"
       environment:
