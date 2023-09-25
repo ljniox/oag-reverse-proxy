@@ -31,9 +31,7 @@ services:
         DEFAULT_EMAIL: james@oneagegroup.com
 
   classmanagement:
-      container_name: catesedb
-      image: oag-com
-      restart: unless-stopped
+      build: class_management_app
       expose:
           - "8002"
       environment:
@@ -44,9 +42,7 @@ services:
         - 8002:8002
 
   oneagegroupcom:
-      container_name: oneagegroup-com
-      image: class-management
-      restart: unless-stopped
+      build: oag_site_web
       expose:
           - "8001"
       environment:
