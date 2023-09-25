@@ -39,6 +39,9 @@ services:
       environment:
           VIRTUAL_HOST: catesdb.oneagegroup.com
           LETSENCRYPT_HOST: catesdb.oneagegroup.com
+          PORT: 8002
+      ports:
+        - 8002:8002
 
   oneagegroupcom:
       container_name: oneagegroup-com
@@ -49,3 +52,6 @@ services:
       environment:
           VIRTUAL_HOST: oneagegroup.com
           LETSENCRYPT_HOST: oneagegroup.com
+          PORT: 8001
+      ports:
+        - 8001:8001
