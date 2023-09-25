@@ -2,7 +2,7 @@ version: "3.8"
 services:
 
   classmanagement:
-      build: class_management_app
+      build:
       context: .
       dockerfile: ../class_management_app/Dockerfile
       expose:
@@ -15,7 +15,7 @@ services:
         - 8002:8002
 
   oneagegroupcom:
-      build: oag_site_web
+      build:
       context: .
       dockerfile: ../oag_site_web/Dockerfile
       expose:
